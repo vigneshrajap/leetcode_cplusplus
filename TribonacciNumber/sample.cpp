@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int tribonacci(int n) {
+
+        if (n == 0) return 0;
+        if (n == 1 || n == 2) return 1;
+
+        int n0 = 0, n1 = 1, n2 = 1;
+        int T_n = 0;
+
+        int count = 3;
+        while(count<=n){
+            T_n = n0 + n1 + n2;
+            n0 = n1;
+            n1 = n2;
+            n2 = T_n;
+            count++;
+        }
+
+        return T_n;
+    }
+};
