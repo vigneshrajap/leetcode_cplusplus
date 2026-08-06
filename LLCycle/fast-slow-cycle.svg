@@ -1,0 +1,51 @@
+<svg viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (REQUIRED) - MUST BE FIRST ELEMENT -->
+  <rect width="600" height="450" fill="#f8f9fa" rx="10"/>
+
+  <!-- Title -->
+  <text x="80" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">Fast &amp; Slow: Cycle Detection</text>
+
+  <!-- Node 1 -->
+  <rect x="50" y="200" width="50" height="40" fill="#ffffff" stroke="#dee2e6" stroke-width="2" rx="3"/>
+  <text x="75" y="225" font-family="monospace" font-size="18" text-anchor="middle" fill="#2c3e50">1</text>
+  <path d="M 100,220 L 130,220" stroke="#dee2e6" stroke-width="2" fill="none"/>
+
+  <!-- Node 2 -->
+  <rect x="130" y="200" width="50" height="40" fill="#ffffff" stroke="#dee2e6" stroke-width="2" rx="3"/>
+  <text x="155" y="225" font-family="monospace" font-size="18" text-anchor="middle" fill="#2c3e50">2</text>
+  <path d="M 180,220 L 210,220" stroke="#dee2e6" stroke-width="2" fill="none"/>
+
+  <!-- Node 3 (Cycle Entry) -->
+  <rect x="210" y="200" width="50" height="40" fill="#ffffff" stroke="#dee2e6" stroke-width="2" rx="3"/>
+  <text x="235" y="225" font-family="monospace" font-size="18" text-anchor="middle" fill="#2c3e50">3</text>
+  <path d="M 260,210 L 300,140" stroke="#dee2e6" stroke-width="2" fill="none"/>
+
+  <!-- Node 4 -->
+  <rect x="300" y="100" width="50" height="40" fill="#ffffff" stroke="#dee2e6" stroke-width="2" rx="3"/>
+  <text x="325" y="125" font-family="monospace" font-size="18" text-anchor="middle" fill="#2c3e50">4</text>
+  <path d="M 350,120 L 410,200" stroke="#dee2e6" stroke-width="2" fill="none"/>
+
+  <!-- Node 5 (Meeting Point) -->
+  <rect x="410" y="200" width="50" height="40" fill="#d1fae5" stroke="#10b981" stroke-width="2" rx="3"/>
+  <text x="435" y="225" font-family="monospace" font-size="18" text-anchor="middle" fill="#2c3e50">5</text>
+  <path d="M 410,230 L 350,300" stroke="#dee2e6" stroke-width="2" fill="none"/>
+
+  <!-- Node 6 -->
+  <rect x="300" y="300" width="50" height="40" fill="#ffffff" stroke="#dee2e6" stroke-width="2" rx="3"/>
+  <text x="325" y="325" font-family="monospace" font-size="18" text-anchor="middle" fill="#2c3e50">6</text>
+  <path d="M 300,320 L 235,240" stroke="#dee2e6" stroke-width="2" fill="none"/>
+
+  <!-- Cycle Note -->
+  <text x="325" y="220" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">Cycle catches</text>
+  <text x="325" y="240" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">the pointers</text>
+
+  <!-- Pointers at Meeting Point -->
+  <polygon points="435,245 430,255 440,255" fill="#3498db"/>
+  <text x="435" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3498db" text-anchor="middle">S &amp; F Meet</text>
+  
+  <!-- Explanation -->
+  <rect x="50" y="350" width="500" height="90" fill="#ffffff" stroke="#dee2e6" stroke-width="1" rx="8"/>
+  <text x="65" y="375" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">Each step, Fast gains 1 node on Slow.</text>
+  <text x="65" y="395" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">In a cycle, they are guaranteed to meet because the</text>
+  <text x="65" y="415" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">relative distance decreases by 1 until it hits 0.</text>
+</svg>
