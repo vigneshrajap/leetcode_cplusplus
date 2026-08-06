@@ -1,0 +1,28 @@
+<svg viewBox="0 0 820 380" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (REQUIRED) - MUST BE FIRST ELEMENT -->
+  <rect width="820" height="380" fill="#f8f9fa" rx="10"/>
+
+  <!-- Title (left-anchored, manually centered) -->
+  <text x="239" y="44" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2c3e50">When do intervals overlap?</text>
+
+  <!-- Panel 1: no overlap. Labels sit OUTSIDE the bars. -->
+  <text x="60" y="94" font-family="Arial, sans-serif" font-size="16" fill="#2c3e50">No overlap: a ends before b starts</text>
+  <text x="90" y="132" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#3498db">a</text>
+  <rect x="110" y="110" width="180" height="32" fill="#3498db" rx="4"/>
+  <text x="330" y="132" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f39c12">b</text>
+  <rect x="350" y="110" width="180" height="32" fill="#f39c12" rx="4"/>
+  <text x="560" y="132" font-family="monospace" font-size="18" fill="#2c3e50">a.end &lt; b.start</text>
+
+  <!-- Panel 2: overlap. Bars on separate rows so they never visually collide. -->
+  <text x="60" y="210" font-family="Arial, sans-serif" font-size="16" fill="#2c3e50">Overlap: their times cross</text>
+  <text x="90" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#3498db">a</text>
+  <rect x="110" y="228" width="240" height="32" fill="#3498db" rx="4"/>
+  <text x="480" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f39c12">b</text>
+  <rect x="230" y="278" width="240" height="32" fill="#f39c12" rx="4"/>
+
+  <!-- guide lines marking the shared x-range (paths, no arrowheads) -->
+  <path d="M 230,224 L 230,314" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+  <path d="M 350,224 L 350,314" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+  <rect x="230" y="324" width="120" height="12" fill="#d1fae5" stroke="#10b981" stroke-width="1.5" rx="3"/>
+  <text x="244" y="362" font-family="Arial, sans-serif" font-size="15" fill="#27ae60">shared = [max start, min end]</text>
+</svg>
