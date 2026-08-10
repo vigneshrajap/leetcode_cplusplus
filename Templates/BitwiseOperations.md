@@ -9,8 +9,10 @@ Bitwise operations work directly on the binary representation of numbers.
 Example:
 
 ```cpp
-5 & 3
+x & y
 ```
+
+Suppose `x = 5` and `y = 3`.
 
 Binary:
 
@@ -28,7 +30,7 @@ Use cases:
 - checking whether a bit is `1`
 - masking bits
 
-In this problem:
+A common pattern is:
 
 ```cpp
 int bit = n & 1;
@@ -43,8 +45,10 @@ This extracts the last bit because `1` in binary is `000...0001`.
 Example:
 
 ```cpp
-5 | 3
+x | y
 ```
+
+Suppose `x = 5` and `y = 3`.
 
 Binary:
 
@@ -62,7 +66,7 @@ Use cases:
 - setting bits to `1`
 - combining bit values
 
-In this solution:
+A typical use is:
 
 ```cpp
 result = (result << 1) | bit;
@@ -77,8 +81,10 @@ This appends the next extracted bit to the result.
 Example:
 
 ```cpp
-5 ^ 3
+x ^ y
 ```
+
+Suppose `x = 5` and `y = 3`.
 
 Binary:
 
@@ -104,10 +110,12 @@ Use cases:
 Example:
 
 ```cpp
-~5
+~x
 ```
 
-Binary `5` is:
+Suppose `x = 5`.
+
+Binary `x` is:
 
 ```text
 00000000000000000000000000000101
@@ -134,10 +142,10 @@ Use cases:
 Example:
 
 ```cpp
-3 << 1
+x << 1
 ```
 
-Binary `3` is `11`. Moving left by one gives:
+If `x = 3`, then moving left by one gives:
 
 ```text
 110
@@ -154,10 +162,10 @@ This is useful because each time we want to add a new bit to the result, we need
 Example:
 
 ```cpp
-6 >> 1
+x >> 1
 ```
 
-Binary `6` is `110`. Moving right by one gives:
+If `x = 6`, then moving right by one gives:
 
 ```text
 011
@@ -165,17 +173,17 @@ Binary `6` is `110`. Moving right by one gives:
 
 That is `3`.
 
-In this problem:
+A common pattern is:
 
 ```cpp
 n >>= 1;
 ```
 
-removes the last bit from `n`, so we can process the next bit.
+This removes the last bit from `n`, so we can process the next bit.
 
 ## Why `uint32_t` is used
 
-`uint32_t` means an unsigned 32-bit integer. It is used because the problem deals with 32-bit values, and using an unsigned type avoids confusion with signed-bit behavior.
+`uint32_t` means an unsigned 32-bit integer. It is used because many problems deal with 32-bit values, and using an unsigned type avoids confusion with signed-bit behavior.
 
 ## Putting it together — common patterns
 
